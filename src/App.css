@@ -1,38 +1,214 @@
-.App {
+.header_login{
+  display: flex;
+  background-color: red;
+  padding: 5px 0;
+  position: fixed;
+  width: 100%;
+}
+.header_login img{
+  padding-left: 24px !important;
+}
+.header_login h2{     
+  flex: 1;
   text-align: center;
+  font-size: 22px;
+  color: #fff;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main_login
+{
+  background-image: url("http://wlp.howizbiz.com/static/img/footerLogin.cf032540.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 100vh;
+  background-position: bottom;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.DNFrom{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 250px;
+  width: -webkit-fill-available;
+}
+.from_card{
+  background-color: #fff;
+  color: rgba(0,0,0,.87);
+  max-width: 450px;
+  box-shadow: rgba(253, 178, 206, 0.47) 0px 2px 20px;
+  width: 30%;
+  display: block;
+}
+.fullForm{
+  background-color: #fff;
+    color: rgba(0,0,0,.87);
+    padding: 24px 16px;
+}
+.Done_set{
+  text-align: center;
+}
+
+.radius-button{
+  padding: 0 10px;
+}
+.radius-button input{
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  padding-left: 10px;
+  border-radius: 25px;
+  border:none ;
+  
+}
+.radius-button input:focus{
+  outline : 3px solid red;
+  border:none ;
+}
+.SetDN{
+  margin-top: 10px;
+  width: 100%;
+  padding: 0 10px;
+}
+.SetDN button{
+  width: 100%;
+  height:50px;
+  color: #fff;
+  background-color: red;
+  border-radius: 25px;
+  border: none;
+}
+.QuenMK{
+  margin-top: 10px;
+  width: 100%;
+  padding: 0 10px;
+  text-align: center;
+  color: red;
+}
+.error{
+  color: red;
+}
+.tasbar{
+  display: flex;
+  justify-content: space-between;
+}
+.header_left{display: flex;}
+.header_left i{
+margin: 20px;
+}
+.header_left img{
+  margin-top: 10px;
+}
+.header_left h2{
+  margin-top: 10px;
+}
+.header_right{
+  display: flex;
+  margin: 20px;
+}
+hr{
+  margin: 0;
+}
+.avatar_loai{
+  display: flex;
+}
+.avatar_loai button{
+  border-radius: 50%;
+  background-color: #b0dac5;
+  border: none;
+  height: 35px;
+  min-width: 35px;
+  width: 35px;
+}
+.avatar_loai button i{
+  color: #da2a1c;
+}
+.button_slot{
+  border-radius: 50%;
+  width:36px;
+  height:36px;
   color: white;
+  background-color: rgb(0, 137, 123);
+  border: none;
+  margin-right: 10px;
 }
-
-.App-link {
-  color: #61dafb;
+.avatar_loai h3{
+  padding-left: 8px !important;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.tableLoai{
+  width: 100%;
+}
+.CallTable{
+  margin: 10px 0;
+}
+.col-sm-2{
+  font-size: 13px;
+  display: flex;
+}
+.col-sm{
+  font-size: 13px;
+}
+.card-img-top{
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  min-width: 40px;
+}
+/*css cho phan trang*/
+.pagination-container{
+  display: flex;
+}
+.perPage{
+  display: flex;
+  justify-content: space-between;
+}
+.MainAdd{
+  padding: 16px;
+}
+.Button_Back{
+  border-radius: 50%;
+  border: none;
+  color: red;
+  opacity: 0.5
+}
+.Button_Back:hove{
+background-color: #da2a1c;
+opacity: 0.8;
+}
+.tableLoai tbody {
+  max-height: 300px; /* Điều chỉnh độ cao tối đa cho tbody */
+  overflow-y: auto; 
+}@media screen and (max-width: 768px) {
+  .tableLoai {
+    max-width: 100%;
+    overflow-x: auto;
   }
-  to {
-    transform: rotate(360deg);
+  
+  /* Tùy chỉnh các cột trong bảng để giữ nguyên chiều rộng */
+  .tableLoai th,
+  .tableLoai td {
+    white-space: nowrap;
   }
-}
+  
+  /* Thiết lập vùng cuộn */
+  .scrollable-table {
+    overflow-x: auto;
+    border: 1px solid #ddd; /* Tạo đường biên để tạo hiệu ứng vùng cuộn */
+    max-width: 100%; /* Đảm bảo vùng cuộn không quá rộng */
+    margin-top: 10px; /* Thêm khoảng cách ở trên */
+  }
+  
+  /* Định dạng các nút phân trang và dropdown số lượng bản ghi trên màn hình nhỏ */
+  .perPage {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+  
+  .items-per-page {
+    margin-top: 10px;
+  }
+  
+  /* Đặt lại giao diện dropdown */
+  .items-per-page select {
+    width: 100%;
+  }}
